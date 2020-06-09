@@ -1,0 +1,173 @@
+{
+  "info": {
+    "description": "Market Data endpoints",
+    "title": "MarketData",
+    "x-provider": "Binance",
+    "x-category": "finance",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://github.com/binance-exchange/binance-official-api-doc"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://www.binance.com"
+    }
+  ],
+  "openapi": "3.0.3",
+  "components": {
+    "securitySchemes": {}
+  },
+  "paths": {
+    "/api/v3/ticker/bookTicker": {
+      "get": {
+        "operationId": "getBookTicker",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "example": "BATBTC",
+            "name": "symbol",
+            "required": false,
+            "in": "query"
+          }
+        ],
+        "description": "Auto generated using TruSource",
+        "responses": {
+          "200": {
+            "description": "Auto generated using TruSource"
+          }
+        }
+      }
+    },
+    "/api/v3/trades": {
+      "get": {
+        "operationId": "getTrades",
+        "parameters": [
+          {
+            "example": "BATBTC",
+            "name": "symbol",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            },
+            "example": "1",
+            "name": "limit"
+          }
+        ],
+        "description": "Auto generated using TruSource",
+        "responses": {
+          "200": {
+            "description": "Auto generated using TruSource"
+          }
+        }
+      }
+    },
+    "/api/v3/ticker/24hr": {
+      "get": {
+        "operationId": "getTicker24hr",
+        "parameters": [
+          {
+            "example": "BATBTC",
+            "name": "symbol",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Auto generated using TruSource",
+        "responses": {
+          "200": {
+            "description": "Auto generated using TruSource"
+          }
+        }
+      }
+    },
+    "/api/v3/avgPrice": {
+      "get": {
+        "operationId": "getAvgPrice",
+        "parameters": [
+          {
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "BATBTC",
+            "name": "symbol"
+          }
+        ],
+        "description": "Auto generated using TruSource",
+        "responses": {
+          "200": {
+            "description": "Auto generated using TruSource"
+          }
+        }
+      }
+    },
+    "/api/v3/ticker/price": {
+      "get": {
+        "parameters": [
+          {
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "BATBTC",
+            "name": "symbol"
+          }
+        ],
+        "description": "Auto generated using TruSource",
+        "responses": {
+          "200": {
+            "description": "Auto generated using TruSource"
+          }
+        },
+        "operationId": "getTickerPrice"
+      }
+    },
+    "/api/v3/depth": {
+      "get": {
+        "parameters": [
+          {
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "BATBTC",
+            "name": "symbol"
+          },
+          {
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            },
+            "example": 5,
+            "name": "limit"
+          }
+        ],
+        "description": "Auto generated using TruSource",
+        "responses": {
+          "200": {
+            "description": "Auto generated using TruSource"
+          }
+        },
+        "operationId": "getDepth"
+      }
+    }
+  }
+}
